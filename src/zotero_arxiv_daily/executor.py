@@ -54,6 +54,7 @@ class Executor:
         for c in corpus:
             paths = [get_collection_path(col) for col in c['data']['collections']]
             c['paths'] = paths
+            print(c['paths'])
         logger.info(f"Fetched {len(corpus)} zotero papers")
         return [CorpusPaper(
             title=c['data']['title'],
